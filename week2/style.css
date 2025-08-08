@@ -1,0 +1,29 @@
+* {
+  color: hotpink;
+  background-color: bisque;
+}
+
+p {
+  color: blue;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#info-para {
+  border: 1rem solid red;
+}
+
+section {
+  text-align: center;
+  border: 0.5rem dashed;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+ol {
+  width: 30rem;
+}
