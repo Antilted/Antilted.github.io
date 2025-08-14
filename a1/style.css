@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&family=Playwrite+AU+QLD:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+QLD:wght@100..400&display=swap");
+
+/* make box and stuff ahh */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #d9cd27, #31cde2);
+  color: #222;
+  line-height: 1.6;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* style da header */
+/* linear-gradien not same with moz graident */
+/* 135deg is angle */
+/* remember to place ; at the end */
+header {
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(135deg, #3366ff, #6a0dad);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+header h2,
+header h3 {
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
+/* style da section */
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 9px;
+  margin-bottom: 25px;
+}
+
+section h3 {
+  color: #336699;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p,
+li {
+  font-family: "Lato", sans-serif;
+}
+
+/* give space and stuff to da paragraph */
+p {
+  margin-bottom: 10px;
+}
+
+/* style da list like the Q2 */
+ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 6px;
+}
