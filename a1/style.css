@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #d9cd27, #31cde2);
+  background: linear-gradient(90deg, hsl(56, 40%, 50%), hsl(187, 45%, 54%));
   color: #222;
   line-height: 1.6;
   padding: 30px;
