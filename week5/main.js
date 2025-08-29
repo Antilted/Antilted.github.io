@@ -39,11 +39,36 @@ console.log(myPets);
 console.log(myPets.length);
 
 // conditionals
-if (myAge < 40) {
+
+const a = 10;
+let b = "10";
+let setToBlue = false;
+
+if (!setToBlue) {
   documentBody.style.backgroundColor = "red";
 } else {
   documentBody.style.backgroundColor = "blue";
 }
+
+// for loop
+
+for (let steps = 0; steps < 5; steps++) {
+  console.log("steps taken:", steps);
+}
+
+// for each
+
+const numbers = [12, 14, 8, 6];
+let total = 0;
+
+function totalNumbers(item) {
+  total = total + item;
+  console.log("item price", item, "running total", total);
+}
+
+numbers.forEach(totalNumbers);
+
+console.log("final total", total);
 
 let hiddenVariable = "?";
 
@@ -53,3 +78,14 @@ function tellMeHowHungryIAm() {
 }
 
 console.log(hiddenVariable);
+
+function addTwoNumbers() {
+  let a = 10;
+  let b = 5;
+  let addTotal = a + b;
+  return addTotal;
+}
+
+let numberTotal = addTwoNumbers(3, 4);
+let diffTotal = addTwoNumbers(12, 50);
+console.log(numberTotal, diffTotal);

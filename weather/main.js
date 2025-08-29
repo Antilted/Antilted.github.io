@@ -2,6 +2,7 @@
 const appBody = document.querySelector("body");
 const tempInput = document.querySelector("#tempInput");
 const tempReturnText = document.querySelector("#tempReturn");
+
 function interpretTemp() {
   //   console.log(tempInput.value);
   let inputTemp = tempInput.value;
