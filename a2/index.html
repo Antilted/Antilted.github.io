@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Media Player Baseline</title>
+  </head>
+  <body>
+    <h1>Music for studying</h1>
+    <div class="music-cards">
+      <!-- First card -->
+      <div class="my-music-card">
+        <img
+          src="assets/aventure.jpg"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Sunset</h3>
+          <p class="my-music-card__artist">Aventure</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">♡</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/Aventure - Sunset.mp3"
+        ></audio>
+      </div>
+
+      <!-- Second card -->
+      <div class="my-music-card">
+        <img
+          src="assets/kyoto.webp"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Kyoto</h3>
+          <p class="my-music-card__artist">Pratzapp & Another Kid</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">♡</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/Another Kid & Pratzapp - Kyoto .mp3"
+        ></audio>
+      </div>
+
+      <!-- Third card -->
+      <div class="my-music-card">
+        <img
+          src="assets/coffee.webp"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Warm cup of coffee</h3>
+          <p class="my-music-card__artist">Moavi</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">♡</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/Moavii - Warm Cup of Coffe.mp3"
+        ></audio>
+      </div>
+    </div>
+
+    <h1>Lets play something</h1>
+
+    <!-- Da Piano -->
+    <div class="piano">
+      <div data-note="C" class="key white"></div>
+      <div data-note="Db" class="key black"></div>
+      <div data-note="D" class="key white"></div>
+      <div data-note="Eb" class="key black"></div>
+      <div data-note="E" class="key white"></div>
+      <div data-note="F" class="key white"></div>
+      <div data-note="Gb" class="key black"></div>
+      <div data-note="G" class="key white"></div>
+      <div data-note="Ab" class="key black"></div>
+      <div data-note="A" class="key white"></div>
+      <div data-note="Bb" class="key black"></div>
+      <div data-note="B" class="key white"></div>
+    </div>
+
+    <!-- Keys for da piano -->
+    <audio id="C" src="assets/C.mp3"></audio>
+    <audio id="Db" src="assets/Db.mp3"></audio>
+    <audio id="D" src="assets/D.mp3"></audio>
+    <audio id="Eb" src="assets/Eb.mp3"></audio>
+    <audio id="E" src="assets/E.mp3"></audio>
+    <audio id="F" src="assets/F.mp3"></audio>
+    <audio id="Gb" src="assets/Gb.mp3"></audio>
+    <audio id="G" src="assets/G.mp3"></audio>
+    <audio id="Ab" src="assets/Ab.mp3"></audio>
+    <audio id="A" src="assets/A.mp3"></audio>
+    <audio id="Bb" src="assets/Bb.mp3"></audio>
+    <audio id="B" src="assets/B.mp3"></audio>
+  </body>
+</html>
