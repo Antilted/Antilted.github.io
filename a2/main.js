@@ -52,7 +52,7 @@ musicCards.forEach((card) => {
   });
 
   likeBtn.addEventListener("click", () => {
-    likeBtn.textContent = likeBtn.textContent === "♡" ? "❤️" : "♡";
+    likeBtn.textContent = likeBtn.textContent === "🤍" ? "❤️" : "🤍";
   });
 
   audio.addEventListener("timeupdate", () => {

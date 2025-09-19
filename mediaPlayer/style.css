@@ -1,9 +1,12 @@
 /* store my custom variables */
 :root {
-  --colour-01: white;
-  --colour-02: black;
-  --colour-03: cornflowerblue;
-  --colour-04: coral;
+  /* my colour palette is taken from https://lospec.com */
+  /* its called lava-gb by aero */
+  /* i picked this color as it realtes... */
+  --colour-01: #330919;
+  --colour-02: #6d7151;
+  --colour-03: #7f642a;
+  --colour-04: #ce8c23;
   --border: solid coral 2px;
 }
 

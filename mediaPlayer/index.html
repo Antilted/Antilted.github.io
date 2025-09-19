@@ -36,10 +36,15 @@
         <!-- media player controls -->
         <div class="mediaPlayerControlContainer">
           <button id="playPauseButton">
-            ▶
+            <img id="playPauseIcon" src="./assets/play.png" alt="play icon" />
             <!-- ⏸ -->
           </button>
           <progress id="timelineProgress" max="100" value="0"></progress>
+          <!-- adding in a time feedback section: let the users know how long the video is and its current time -->
+          <p class="timeContainer">
+            <span id="currentTimeFeedback">0:00 </span>
+            <span id="totalTImeFeedback">4:30</span>
+          </p>
         </div>
       </section>
     </main>

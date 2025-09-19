@@ -29,14 +29,14 @@ body {
   padding: 1rem;
 
   /* Set background image with fixed positioning */
-  background-image: url("assets/beachnight.jpg");
+  background-image: url("assets/blue.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-/* Title for Music for Studying */
+/* Da music study title */
 h1 {
   font-size: 3rem;
   text-align: center;
@@ -49,7 +49,7 @@ h1 {
     0px 0px 20px rgb(0, 251, 255), 0px 0px 20px rgb(138, 229, 229);
 }
 
-/* Title for Let's Play Something */
+/* da lets play something title */
 .lets-play-title {
   font-size: 2.5rem;
   text-align: center;
@@ -61,7 +61,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Music Cards Section */
+/* da section of music cards */
 .music-cards {
   display: flex;
   gap: 1rem;
@@ -131,7 +131,7 @@ h1 {
 
 .my-music-card__play-btn:hover,
 .my-music-card__like-btn:hover {
-  color: #1db954; /* Spotify's brand color */
+  color: #1db954; 
 }
 
 /* Piano Section */
