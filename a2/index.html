@@ -6,12 +6,23 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-    <title>A2 Music for studying</title>
+    <!-- I have decided to go for a music for studying type theme, my idea is simple
+     because I was thinking of creating six music cards in spotify inspired style and an interactive piano
+     these two interactive features are what I think is very suitable for the theme and it's in the range of what i can handle -->
+    <title>Lofi</title>
   </head>
   <body>
     <h1>Music for studying</h1>
+
+    <!-- Music card section -->
     <div class="music-cards">
-      <!-- First card -->
+      <!-- It was very hard to find a specific tutorial on how to make one so I basically just try to draw as much information
+       on every tutorial I found so that i was able to make my own  -->
+      <!-- All the off the cards follow the same structure of the album cover on top, a play pause option and also a heart element -->
+      <!-- First one -->
+      <!-- The songs I chose are all non-copyrighted songs from freetouse.com/music -->
+      <!-- I went with some of the Lofi songs option as they fit the theme -->
+      <!-- I will also add the original link to the artist in my code below -->
       <div class="my-music-card">
         <img
           src="assets/aventure.jpg"
@@ -37,9 +48,10 @@
           class="my-music-card__audio"
           src="assets/Aventure - Sunset.mp3"
         ></audio>
+        <!-- https://freetouse.com/music/search/Sunset-Aventure -->
       </div>
 
-      <!-- Second card -->
+      <!-- Second one -->
       <div class="my-music-card">
         <img
           src="assets/kyoto.webp"
@@ -65,9 +77,10 @@
           class="my-music-card__audio"
           src="assets/Another Kid & Pratzapp - Kyoto .mp3"
         ></audio>
+        <!-- https://freetouse.com/music/search/Kyoto-Another-kid -->
       </div>
 
-      <!-- Third card -->
+      <!-- Third one -->
       <div class="my-music-card">
         <img
           src="assets/coffee.webp"
@@ -75,7 +88,7 @@
           class="my-music-card__album"
         />
         <div class="my-music-card__info">
-          <h3 class="my-music-card__title">Warm cup of coffee</h3>
+          <h3 class="my-music-card__title">Warm Cup of Coffee</h3>
           <p class="my-music-card__artist">Moavi</p>
           <div class="my-music-card__controls">
             <button class="my-music-card__play-btn">▶️</button>
@@ -93,12 +106,107 @@
           class="my-music-card__audio"
           src="assets/Moavii - Warm Cup of Coffe.mp3"
         ></audio>
+        <!-- https://freetouse.com/music/search/warm-cup-of-coffee -->
+      </div>
+
+      <!-- Fourth one -->
+      <div class="my-music-card">
+        <img
+          src="assets/cheese.jpg"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Cheese</h3>
+          <p class="my-music-card__artist">Lukrembo</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">🤍</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/Lukrembo - Cheese.mp3"
+        ></audio>
+        <!-- https://freetouse.com/music/search/cheese-lukrembo -->
+      </div>
+
+      <!-- Fifth one -->
+      <div class="my-music-card">
+        <img
+          src="assets/taro.jpg"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Taro swirl</h3>
+          <p class="my-music-card__artist">Massobeats</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">🤍</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/massobeats - taro swirl.mp3"
+        ></audio>
+        <!-- https://freetouse.com/music/massobeats/taro-swirl -->
+      </div>
+
+      <!-- Sxith one-->
+      <div class="my-music-card">
+        <img
+          src="assets/reach.jpg"
+          alt="Album Cover"
+          class="my-music-card__album"
+        />
+        <div class="my-music-card__info">
+          <h3 class="my-music-card__title">Reach</h3>
+          <p class="my-music-card__artist">Balynt</p>
+          <div class="my-music-card__controls">
+            <button class="my-music-card__play-btn">▶️</button>
+            <input
+              type="range"
+              class="my-music-card__progress"
+              value="0"
+              min="0"
+              max="100"
+            />
+            <button class="my-music-card__like-btn">🤍</button>
+          </div>
+        </div>
+        <audio
+          class="my-music-card__audio"
+          src="assets/Balynt - Reach.mp3"
+        ></audio>
+        <!-- https://freetouse.com/music/balynt/reach -->
       </div>
     </div>
 
-    <h1>Lets play something</h1>
-
-    <!-- Da Piano -->
+    <footer>
+      <p>"Relax, breathe, and let the music flow."</p>
+    </footer>
+    <!-- Here i wanted to add a fun interactive element to the web page and decided to add a piano. 
+ I personally think that it fits the theme because of students usually take a short break between their study hours
+ so a piano would indeed be a fun thing to play on  -->
+    <!-- The tutorial on how to code the piano is here: https://www.youtube.com/watch?v=vjco5yKZpU8
+  creator: Web dev simplified
+  i find this tutorial quite helpful as its simple and easy to follow -->
+    <!-- NOTE: I ADDED THE PIANO BEFORE I DID THE MUSIC CARD -->
     <div class="piano">
       <div data-note="C" class="key white"></div>
       <div data-note="Db" class="key black"></div>
@@ -114,7 +222,6 @@
       <div data-note="B" class="key white"></div>
     </div>
 
-    <!-- Keys for da piano -->
     <audio id="C" src="assets/C.mp3"></audio>
     <audio id="Db" src="assets/Db.mp3"></audio>
     <audio id="D" src="assets/D.mp3"></audio>

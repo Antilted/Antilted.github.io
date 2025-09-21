@@ -1,140 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+QLD:wght@100..400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+QLD:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
+/* For the style i chose to do more of a warm lofi type website by using a calm background then overlaying an orange yellowish color of it
+The two fonts i mainly use are Lato and Caprasimo as i think they are simple and not too distracting for the students */
+/* everything will be centered as for quick access to the songs as students main focus is on their studies and not to waste time finding and 
+looking through interactions */
+/* Set a soft background */
 html {
-  color-scheme: dark light;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Lato", sans-serif;
+  color: #f4f4f4;
+  background: linear-gradient(
+      135deg,
+      rgba(250, 208, 146, 0.8),
+      rgba(250, 150, 150, 0.8)
+    ),
+    url("assets/blue.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
+/* This is my main body styling, everything is centered so it makes the audience focus on what is in front of them */
 body {
-  min-height: 100vh;
-  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-
-  /* Set background image with fixed positioning */
-  background-image: url("assets/blue.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  gap: 2rem;
+  padding: 3rem;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Caprasimo", sans-serif;
 }
 
-/* Da music study title */
+/* I chose to style the text in a similar way as well, trying to keep things simple yet still screams out "music for studying" */
 h1 {
   font-size: 3rem;
   text-align: center;
-  margin: 2rem 0;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif
-  letter-spacing: 2px;
+  margin: 1.5rem 0;
+  font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  text-shadow: 0px 0px 10px rgb(0, 26, 255), 0px 0px 20px rgb(0, 225, 255),
-    0px 0px 20px rgb(0, 251, 255), 0px 0px 20px rgb(138, 229, 229);
-}
-
-/* da lets play something title */
-.lets-play-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  font-family: "Arial", sans-serif;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  color: #f1f1f1;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* da section of music cards */
+/* Music cards container */
 .music-cards {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem;
 }
 
+/* Here I tried to make a spotify style music card for my web as this is the aesthetic i chose */
+/* I used the album cover alongside song title & artist name with a semi-transparent background */
 .my-music-card {
-  background-color: rgba(
+  background: rgba(
     30,
     30,
     30,
-    0.8
-  ); /* Semi-transparent dark background */
-  color: white;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    0.6
+  ); /* THis is the semi-transparent background */
+  color: #f1f1f1;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  font-family: "Bebas Neue", sans-serif;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(5px); /* This is the soft background blur */
 }
 
+/* I have also added a mouse hover feature as i think this would feel more interactive and fun rather than having on static at all time */
+.my-music-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Album image styles */
+/* This here its just a resize of the image so that i fits in the music card box */
 .my-music-card__album {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
+/* Music info (title and artist) */
+/* Same here with the title & artist */
 .my-music-card__info {
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  gap: 0.5rem;
 }
 
 .my-music-card__title {
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: 1.4rem;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
 }
 
 .my-music-card__artist {
-  margin: 10px 0;
+  font-size: 1rem;
   color: #aaa;
 }
 
 .my-music-card__controls {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.my-music-card__progress {
-  flex-grow: 1;
+  gap: 15px;
+  margin-top: 1rem;
 }
 
 .my-music-card__play-btn,
 .my-music-card__like-btn {
+  font-size: 22px;
+  color: #f1f1f1;
   background: none;
   border: none;
-  color: #fff;
-  font-size: 18px;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .my-music-card__play-btn:hover,
 .my-music-card__like-btn:hover {
-  color: #1db954; 
+  color: #b3c9ff; /* Soft blue on hover */
 }
 
-/* Piano Section */
+/* Progress bar */
+/* Here i made the progress bar using the slider because i think that its simple and i have tried to make a progress timeline instead but it didnt turn out quite right */
+.my-music-card__progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  outline: none;
+}
+
+.my-music-card__progress::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  background: #b3c9ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* piano */
+/* Here i just follow the code from the tutorial as I'm not sure how to customize my own piano just yet */
 .piano {
   display: flex;
 }
