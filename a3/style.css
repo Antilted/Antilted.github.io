@@ -1,0 +1,267 @@
+/* styles.css
+   Retro neon 8-bit style, 3D perspective, and layout
+*/
+
+:root {
+  --bg: #06030a;
+  --neon-pink: #ff2d95;
+  --neon-blue: #2de0ff;
+  --glass: rgba(255, 255, 255, 0.04);
+  --overlay: rgba(0, 0, 0, 0.5);
+  --font-8bit: "Courier New", Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--font-8bit);
+  -webkit-font-smoothing: antialiased;
+}
+.site-header {
+  padding: 28px 32px;
+  text-align: center;
+}
+.title-8bit {
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px var(--neon-blue), 0 0 20px var(--neon-pink);
+}
+.subtitle {
+  color: #bfc9d8;
+  opacity: 0.9;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+/* Section containers */
+.gallery-section {
+  position: relative;
+  min-height: 520px;
+  padding: 64px 28px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* video background with dark overlay */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.35);
+}
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Label shown in top-left of each section */
+.section-label {
+  position: absolute;
+  left: 32px;
+  top: 24px;
+  z-index: 3;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 45, 149, 0.08),
+    rgba(45, 224, 255, 0.06)
+  );
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* common carousel styles */
+.carousel {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1400px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+/* item */
+.carousel .item {
+  width: 220px;
+  height: 260px;
+  margin: 0 12px;
+  transform-origin: center center;
+  transition: transform 300ms cubic-bezier(0.2, 0.9, 0.3, 1), opacity 250ms;
+  cursor: grab;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.15)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.carousel .item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.item-caption {
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+/* 3 different carousel styles (unique interaction visuals) */
+
+/* 3D circular carousel (section 1) */
+.carousel-3d .item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+}
+
+/* coverflow: rotate and depth (section 2) */
+.carousel-coverflow {
+  display: block;
+}
+.carousel-coverflow .items-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-coverflow .item {
+  display: inline-flex;
+  position: relative;
+  margin: 0 18px;
+}
+
+/* stack style (section 3) */
+.carousel-stack .item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+}
+
+/* small divider between sections */
+.section-divider {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.08);
+  font-size: 28px;
+  padding: 12px 0;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 2, 6, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+.modal-content {
+  width: min(1100px, 94%);
+  max-height: 84vh;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 3, 7, 0.96),
+    rgba(6, 6, 10, 0.98)
+  );
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.modal-close {
+  position: absolute;
+  right: 22px;
+  top: 18px;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+.modal-left {
+  flex: 1;
+  min-width: 300px;
+}
+.modal-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.modal-right {
+  flex: 1;
+  padding: 8px;
+}
+.title-8bit.small {
+  font-size: 20px;
+  color: var(--neon-pink);
+}
+.muted {
+  opacity: 0.7;
+  font-size: 13px;
+}
+.thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.thumbs img {
+  width: 64px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* little UI polish */
+@media (max-width: 900px) {
+  .carousel {
+    height: 300px;
+  }
+  .carousel .item {
+    width: 170px;
+    height: 210px;
+  }
+  .modal-content {
+    flex-direction: column;
+  }
+}

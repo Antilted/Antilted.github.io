@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Retro 3D Image Scroll Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <h1 class="title-8bit">RETRO GALLERY</h1>
+      <p class="subtitle">Scroll drag hybrid and click for details</p>
+    </header>
+
+    <main>
+      <!-- SECTION 1: 8-bit classics (Pacman, Tetris, Mario, Sonic, Space Invaders) -->
+      <section
+        class="gallery-section"
+        id="section-1"
+        data-section-title="8-Bit Classics"
+      >
+        <video class="bg-video" autoplay loop muted playsinline>
+          <source src="assets/contra.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="section-label">1 — 8-Bit Classics</div>
+
+        <div class="carousel carousel-3d" id="carousel-1" data-speed="0.03">
+          <!-- Items: these images should be replaced with your own files under /images/ -->
+          <div
+            class="item"
+            data-title="Pac-Man (1980)"
+            data-year="1980"
+            data-desc="Arcade maze game by Namco. Eat pellets, avoid ghosts."
+            data-extra='["images/pacman_1.jpg","images/pacman_2.jpg"]'
+          >
+            <img src="assets/pacman.jpg" alt="Pacman" />
+            <div class="item-caption">Pac-Man</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="Tetris (1984)"
+            data-year="1984"
+            data-desc="Falling tetromino puzzle classic."
+            data-extra='["images/tetris_1.jpg","images/tetris_2.jpg"]'
+          >
+            <img src="assets/trteris.webp" alt="Tetris" />
+            <div class="item-caption">Tetris</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="Super Mario (1985)"
+            data-year="1985"
+            data-desc="Platforming legend by Nintendo."
+            data-extra='["images/mario_1.jpg","images/mario_2.jpg"]'
+          >
+            <img src="assets/mario.png" alt="Super Mario" />
+            <div class="item-caption">Mario</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="Sonic The Hedgehog (1991)"
+            data-year="1991"
+            data-desc="Speedy platformer starring Sonic."
+            data-extra='["images/sonic_1.jpg","images/sonic_2.jpg"]'
+          >
+            <img src="assets/sonic.jpg" alt="Sonic" />
+            <div class="item-caption">Sonic</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="Space Invaders (1978)"
+            data-year="1978"
+            data-desc="Classic shoot 'em up where aliens descend."
+            data-extra='["images/spaceinv_1.jpg","images/spaceinv_2.jpg"]'
+          >
+            <img src="assets/si.jpg" alt="Space Invaders" />
+            <div class="item-caption">Space Invaders</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Divider -->
+      <div class="section-divider">▲</div>
+
+      <!-- SECTION 2: Early 3D (placeholder images) -->
+      <section
+        class="gallery-section"
+        id="section-2"
+        data-section-title="Early 3D"
+      >
+        <video class="bg-video" autoplay loop muted playsinline>
+          <source src="assets/early.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="section-label">2 — Early 3D</div>
+
+        <div
+          class="carousel carousel-coverflow"
+          id="carousel-2"
+          data-speed="0.02"
+        >
+          <!-- 5 placeholders for early 3D -->
+          <div
+            class="item"
+            data-title="Spasim"
+            data-year="1995"
+            data-desc="Placeholder description for early 3D title #1."
+            data-extra='["images/early1_a.jpg","images/early1_b.jpg"]'
+          >
+            <img src="assets/spasim.png" alt="Spasim" />
+            <div class="item-caption">Spasim</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="StarRaider"
+            data-year="1996"
+            data-desc="Placeholder description for early 3D title #2."
+            data-extra='["images/early2_a.jpg","images/early2_b.jpg"]'
+          >
+            <img src="assets/Star-Raiders.jpg" alt="StarRaider" />
+            <div class="item-caption">Star Raider</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="I,Robot"
+            data-year="1997"
+            data-desc="Placeholder description for early 3D title #3."
+            data-extra='["images/early3_a.jpg","images/early3_b.jpg"]'
+          >
+            <img src="assets/I,robot.avif" alt="I,Robot" />
+            <div class="item-caption">I,Robot</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="The Colony"
+            data-year="1998"
+            data-desc="Placeholder description for early 3D title #4."
+            data-extra='["images/early4_a.jpg","images/early4_b.jpg"]'
+          >
+            <img src="assets/thecolony.jpg" alt="The Colony" />
+            <div class="item-caption">The Colony</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="4DBoxing"
+            data-year="1999"
+            data-desc="Placeholder description for early 3D title #5."
+            data-extra='["images/early5_a.jpg","images/early5_b.jpg"]'
+          >
+            <img src="assets/4D boxing.jpg" alt="4D Boxing" />
+            <div class="item-caption">4D Boxing</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider">▲</div>
+
+      <!-- SECTION 3: Recent 3D (placeholder images) -->
+      <section
+        class="gallery-section"
+        id="section-3"
+        data-section-title="Recent 3D"
+      >
+        <video class="bg-video" autoplay loop muted playsinline>
+          <source src="assets/turok.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="section-label">3 — Recent 3D</div>
+
+        <div class="carousel carousel-stack" id="carousel-3" data-speed="0.04">
+          <!-- 5 placeholders for recent 3D -->
+          <div
+            class="item"
+            data-title="Doom"
+            data-year="2015"
+            data-desc="Placeholder for modern 3D game #1."
+            data-extra='["images/recent1_a.jpg","images/recent1_b.jpg"]'
+          >
+            <img src="assets/Doom.webp" alt="Doom" />
+            <div class="item-caption">Doom</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="TombRadier"
+            data-year="2016"
+            data-desc="Placeholder for modern 3D game #2."
+            data-extra='["images/recent2_a.jpg","images/recent2_b.jpg"]'
+          >
+            <img src="assets/Tomb_Raider_(1996).png" alt="TombRadier" />
+            <div class="item-caption">Tomb Raider</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="SilentHill"
+            data-year="2018"
+            data-desc="Placeholder for modern 3D game #3."
+            data-extra='["images/recent3_a.jpg","images/recent3_b.jpg"]'
+          >
+            <img src="assets/silenthill.webp" alt="SilentHill" />
+            <div class="item-caption">Silent Hill</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="MonsterHunter"
+            data-year="2020"
+            data-desc="Placeholder for modern 3D game #4."
+            data-extra='["images/recent4_a.jpg","images/recent4_b.jpg"]'
+          >
+            <img src="assets/mh.jpg" alt="MonsterHunter" />
+            <div class="item-caption">Monster Hunter</div>
+          </div>
+
+          <div
+            class="item"
+            data-title="ResidentEvil"
+            data-year="2022"
+            data-desc="Placeholder for modern 3D game #5."
+            data-extra='["images/recent5_a.jpg","images/recent5_b.jpg"]'
+          >
+            <img src="assets/Resident_Evil_1.png" alt="ResidentEvil" />
+            <div class="item-caption">Resident Evil</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal for item details -->
+    <div id="info-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          ×
+        </button>
+        <div class="modal-left">
+          <img id="modal-main-image" src="" alt="" />
+          <div id="modal-thumbs" class="thumbs"></div>
+        </div>
+        <div class="modal-right">
+          <h2 id="modal-title" class="title-8bit small"></h2>
+          <p id="modal-year" class="muted small"></p>
+          <p id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
