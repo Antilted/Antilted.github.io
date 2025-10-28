@@ -85,7 +85,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* common carousel styles */
+/*  carousel styles */
 .carousel {
   position: relative;
   z-index: 2;
@@ -137,9 +137,7 @@ body {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
 
-/* 3 different carousel styles (unique interaction visuals) */
-
-/* 3D circular carousel (section 1) */
+/* section 1 */
 .carousel-3d .item {
   position: absolute;
   left: 50%;
@@ -147,7 +145,7 @@ body {
   transform-style: preserve-3d;
 }
 
-/* coverflow: rotate and depth (section 2) */
+/* section 2 */
 .carousel-coverflow {
   display: block;
 }
@@ -162,7 +160,7 @@ body {
   margin: 0 18px;
 }
 
-/* stack style (section 3) */
+/* section 3 */
 .carousel-stack .item {
   position: absolute;
   left: 50%;
@@ -252,7 +250,7 @@ body {
   cursor: pointer;
 }
 
-/* little UI polish */
+/*  UI polish */
 @media (max-width: 900px) {
   .carousel {
     height: 300px;

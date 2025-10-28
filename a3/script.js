@@ -58,14 +58,14 @@
     modal.setAttribute("aria-hidden", "true");
   }
 
-  // Generic interactive carousel behavior (drag + autoplay)
+  //  interactive carousel behavior (drag + autoplay)
   class CarouselBase {
     constructor(el) {
       this.el = el;
       this.items = Array.from(el.querySelectorAll(".item"));
       this.speed = parseFloat(el.dataset.speed) || 0.02;
-      this.offset = 0; // current scroll offset (float)
-      this.velocity = this.speed; // autoplay velocity
+      this.offset = 0;
+      this.velocity = this.speed;
       this.dragging = false;
       this.lastX = 0;
       this.raf = null;
@@ -91,20 +91,16 @@
     onPointerUp(e) {
       this.dragging = false;
       this.el.style.cursor = "grab";
-      // small momentum after release:
       this.velocity *= 0.98;
     }
     onPointerMove(e) {
       if (!this.dragging) return;
       const dx = e.clientX - this.lastX;
       this.lastX = e.clientX;
-      // convert dx to offset change
       this.offset += dx * 0.6;
-      // convert drag to velocity (for smoother feel)
       this.velocity = dx * 0.02;
     }
     setupClickHandlers() {
-      // open modal when clicking an item (non-drag click)
       this.items.forEach((item) => {
         let pointerDownAt = 0;
         item.addEventListener("pointerdown", (e) => {
@@ -136,19 +132,16 @@
       if (!this.paused && !this.dragging) {
         this.offset += this.velocity;
       } else if (!this.paused && this.dragging) {
-        // when dragging, velocity changes are handled in pointermove
       }
-      // friction
+
       this.velocity *= 0.995;
       this.render();
       this.raf = requestAnimationFrame(() => this.tick());
     }
-    render() {
-      // to implement in subclass
-    }
+    render() {}
   }
 
-  // CAROUSEL 1: circular 3D layout (rotate around Y)
+  // CAROUSEL 1:
   class Carousel3D extends CarouselBase {
     constructor(el) {
       super(el);
@@ -156,7 +149,6 @@
       window.addEventListener("resize", () => {
         this.radius = Math.min(this.el.clientWidth, 1000) / 2.5;
       });
-      // center items absolutely
       this.items.forEach((it) => {
         it.style.position = "absolute";
         it.style.left = "50%";
@@ -179,13 +171,12 @@
         it.style.opacity = 0.6 + (scale - 1) * 0.8;
         it.style.transition = this.dragging ? "none" : "";
         it.style.cursor = "grab";
-        // tilt slightly based on x to enhance 3D
         it.style.transform += ` rotateY(${angle * 0.15}deg)`;
       });
     }
   }
 
-  // CAROUSEL 2: coverflow (center item bigger, sides rotated)
+  // CAROUSEL 2:
   class CarouselCoverflow extends CarouselBase {
     constructor(el) {
       super(el);
@@ -197,7 +188,6 @@
       );
     }
     render() {
-      // compute positions along x from offset
       const itemW = this.items[0].getBoundingClientRect().width + 36;
       const centerIndexFloat =
         -this.offset / itemW + (this.items.length - 1) / 2;
@@ -221,7 +211,7 @@
     }
   }
 
-  // CAROUSEL 3: stacked cards with parallax (depth stack)
+  // CAROUSEL 3:
   class CarouselStack extends CarouselBase {
     constructor(el) {
       super(el);
@@ -234,14 +224,10 @@
     }
     render() {
       const len = this.items.length;
-      // offset in indices
       const center = (this.offset / this.baseSpacing) % len;
-      // build stack
       this.items.forEach((it, i) => {
         const idx = i;
-        // compute distance from center
         const dist = (idx - center + len) % len;
-        // normalize to small range
         const d = dist > len / 2 ? dist - len : dist;
         const translateY = d * 28;
         const translateZ = -Math.abs(d) * 120;
@@ -262,15 +248,11 @@
   const c2 = new CarouselCoverflow($("#carousel-2"));
   const c3 = new CarouselStack($("#carousel-3"));
 
-  // Add click-to-open is already done in CarouselBase.setupClickHandlers
-
-  // small keyboard accessibility: Esc to close modal
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
 
-  // Example: let each carousel have a slightly different base autoplay speed
   c1.velocity = 0.06;
   c2.velocity = 0.035;
-  c3.velocity = -0.045; // negative to spin other direction
+  c3.velocity = -0.045;
 })();
