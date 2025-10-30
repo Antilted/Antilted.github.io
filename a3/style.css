@@ -1,7 +1,6 @@
-/* styles.css
-   Retro neon 8-bit style, 3D perspective, and layout
-*/
-
+/* Here i've decided to do a neon style like you usually see in those old school arcades, the color will be mainly 
+light blue and pink aiming to mimic that vibe */
+/* Each of the moving boxes will contain the images and information when you interact with them */
 :root {
   --bg: #06030a;
   --neon-pink: #ff2d95;

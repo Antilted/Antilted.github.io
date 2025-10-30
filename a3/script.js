@@ -1,9 +1,7 @@
-/* script.js
-   I have decided to make three separate carousels for each section, I've taken a look 
-   at a lot of tutorials and tried to make them like my own:
-   https://youtu.be/yLe-EvqlKBg?si=J05K-L-wA6Vun-Vl
-   https://youtu.be/eLHSFxF0Z4U?si=-f4B6yE4E5cSylDc
-*/
+//  I have decided to make three separate carousels for each section, I've taken a look
+//  at a lot of tutorials and tried to make them like my own:
+//  https://youtu.be/yLe-EvqlKBg?si=J05K-L-wA6Vun-Vl
+//  https://youtu.be/eLHSFxF0Z4U?si=-f4B6yE4E5cSylDc
 // The first section is like your typical carousel type, i coded them so that they would face the viewer and also its a
 // click and mouse move type interaction, like you click it and you can interact with it
 
