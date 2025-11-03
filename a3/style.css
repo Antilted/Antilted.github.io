@@ -40,6 +40,8 @@ body {
 }
 
 /* Section containers */
+/* Here i decided to make them look like the musica cards from last assingment but with different 
+interactivity this time */
 .gallery-section {
   position: relative;
   min-height: 520px;
@@ -51,6 +53,8 @@ body {
 }
 
 /* video background with dark overlay */
+/* I wanted to add some video in the back to give the viewers a nostalgic feeling of the arcade
+the games i included are contra, 4Dboxing and turok  */
 .bg-video {
   position: absolute;
   inset: 0;
@@ -249,7 +253,7 @@ body {
   cursor: pointer;
 }
 
-/*  UI polish */
+/*  A lil bit UI polish */
 @media (max-width: 900px) {
   .carousel {
     height: 300px;
